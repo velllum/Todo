@@ -1,4 +1,4 @@
-from rest_framework import views, response, exceptions
+from rest_framework import views, response, exceptions, versioning
 
 
 class RefineResponseMixin(views.APIView):

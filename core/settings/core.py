@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'djoser',
     'django_filters',
     'api.apps.ApiConfig',
+    'web.apps.WebConfig',
 ]
 
 MIDDLEWARE = [
