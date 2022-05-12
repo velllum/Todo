@@ -15,14 +15,17 @@ class BaseView(views.View):
 class ListView(BaseView):
     """- Вывод списком """
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.context = {}
+
     def get(self, request):
         dictionary = self.client.get('/api/v1/notes/').json()
-        context = {}
 
         if dictionary.get('success'):
-            context['list_dicts'] = dictionary['data']['results']
+            self.context['list_dicts'] = dictionary['data']['results']
 
-        return render(request, template_name='index.html', context=context)
+        return render(request, template_name='index.html', context=self.context)
 
 
 class DetailView(views.View):
