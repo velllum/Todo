@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+    <h1>Базовый шаблон.</h1>
+
+    {% for note in list_dicts %}
+    <span>{{ note.id }} {{ note.status }} {{ note.title }} {{ note.title }}</span><br>
+    <span>{{ note.content }}</span><br>
+    <hr>
+    {% endfor %}
+
+</body>
+</html>
